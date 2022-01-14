@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>DDR4 tCL, tRFC1, tREFi Calculator</title>
+  </head>
+  <body style="background-color: #222;">
+  <div style="color:whitesmoke;text-align:left;max-width: 350px;">
+
+    <h3>DDR4 tCL and tRFC1 Calc</h3>
+
+    <fieldset>
+      <div>RAM Frequency (MT/s): <input type="number" id="DDR_Freq" value="3200" style="width: 25%;" autofocus></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>CAS Latency to Absolute Latency(ns)</legend>
+      <div>CAS Latency: <input type="number" id="DDR_tCL" value="16" style="width: 15%;"></div>
+      <div>Absolute Latency (ns): <input type="text" id="DDR_Latency" value="10.0000" style="width: 25%;" readonly></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>tRFC:</legend>
+      <fieldset>
+        <legend>Convert tRFC(ns) to tRFC1 value:</legend>
+        <div>tRFC(ns): <input type="number" id="DDR_tRFCns" value="350" style="width: 25%;"></div>
+        <div>tRFC1: <input type="text" id="DDR_tRFC1" value="560" style="width: 25%;" readonly></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Convert tRFC1 value to tRFC(ns):</legend>
+        <div>tRFC1: <input type="number" id="DDR_tRFC1_" value="560" style="width: 25%;"></div>
+        <div>tRFC(ns): <input type="text" id="DDR_tRFCns_" value="350" style="width: 50%;" readonly></div>
+      </fieldset>
+
+      <p style="font-size: 9;">This calculator assumes 8Gb chips for tRFC of 350ns. For 16Gb Use tRFC of 550ns. (JESD79-4B)</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>tREFi cycles at 7.8µS tREFi:</legend>
+      <div>tREFi: <input type="text" id="DDR_tREFi" value="12480" style="width: 50%;" readonly></div>
+    </fieldset>    
+
+  </div>
+  </body>
+  <script src="simpleramcalc.js"></script>
+</html> 
